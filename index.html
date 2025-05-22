@@ -1,0 +1,1041 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clinique de Néphrologie César - Spécialistes des reins à Attiégou, Togo</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://images.unsplash.com/photo-1579684385127-1ef15d508118?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');
+            background-size: cover;
+            background-position: center;
+        }
+        
+        .appointment-form {
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .service-card:hover {
+            transform: translateY(-10px);
+            transition: all 0.3s ease;
+        }
+        
+        .map-container {
+            overflow: hidden;
+            padding-bottom: 56.25%;
+            position: relative;
+            height: 0;
+        }
+        
+        .map-container iframe {
+            left: 0;
+            top: 0;
+            height: 100%;
+            width: 100%;
+            position: absolute;
+        }
+
+        /* Mobile menu styles */
+        .mobile-menu {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+        }
+
+        .mobile-menu.open {
+            max-height: 500px;
+            transition: max-height 0.5s ease-in;
+        }
+
+        /* Smooth scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Assurance logos animation */
+        .assurance-logo {
+            transition: all 0.3s ease;
+            filter: grayscale(100%);
+            opacity: 0.7;
+        }
+
+        .assurance-logo:hover {
+            filter: grayscale(0%);
+            opacity: 1;
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body class="font-sans antialiased text-gray-800">
+    <!-- Header -->
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center">
+                <div class="px-2 py-1">
+                    <!-- <i class="fas fa-heartbeat text-xl"></i> -->
+                    <a href="#accueil" target="_blank">
+                        <img src="Entete_CESAR.png" alt="Entete_CESAR" width=90px" height="90px">
+                    </a>
+                </div>
+                <h1 class="text-xl font-bold text-blue-800">Clinique de Néphrologie <span class="text-green-600">César</span></h1>
+            </div>
+            
+            <nav class="hidden md:flex space-x-1 mt-0">
+                <a href="#accueil" class="text-blue-800 font-medium hover:text-blue-600 p-4">Accueil</a>
+                <a href="#services" class="text-gray-600 hover:text-blue-600 p-4">Services</a>
+                <a href="#equipe" class="text-gray-600 hover:text-blue-600 p-4">Notre Équipe</a>
+                <a href="#assurances" class="text-gray-600 hover:text-blue-600 p-4">Assurances</a>
+                <a href="#contact" class="text-gray-600 hover:text-blue-600 p-4">Contact</a>
+
+                <!-- <a href="https://wa.me/22896419253" target="_blank" style="display: inline-block; background-color: #25D366; color: white; padding: 10px 20px; border-radius: 5px; text-decoration: none; font-weight: bold;">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" width="20" style="vertical-align: middle; margin-right: 8px;" alt="WhatsApp">
+                    Prendre RDV
+                </a> -->
+                <a href="https://wa.me/22896419253?text=Clinique%20César,%20Bonjour%20Que%20peut-on%20faire%20pour%20vous?." target="_blank" style="display: inline-block; background-color: #25D366; color: white; padding: 10px 20px; border-radius: 5px; text-decoration: none; font-weight: bold;">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" width="20" style="vertical-align: middle; margin-right: 8px;" alt="WhatsApp">
+                    Prendre RDV
+                </a>
+                <!-- <a href="#rdv" class="bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700">Prendre RDV</a> -->
+            </nav>
+            
+            <button id="mobileMenuButton" class="md:hidden text-gray-600 focus:outline-none">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobileMenu" class="mobile-menu md:hidden bg-white border-t border-gray-200">
+            <div class="container mx-auto px-4 py-3 flex flex-col space-y-4">
+                <a href="#accueil" class="py-2 text-blue-800 font-medium border-b border-gray-100">Accueil</a>
+                <a href="#services" class="py-2 text-gray-600 hover:text-blue-600 border-b border-gray-100">Services</a>
+                <a href="#equipe" class="py-2 text-gray-600 hover:text-blue-600 border-b border-gray-100">Notre Équipe</a>
+                <a href="#assurances" class="py-2 text-gray-600 hover:text-blue-600 border-b border-gray-100">Assurances</a>
+                <a href="#contact" class="py-2 text-gray-600 hover:text-blue-600 border-b border-gray-100">Contact</a>
+                <a href="https://wa.me/22896419253" class="py-3 bg-blue-600 text-white text-center rounded-md hover:bg-green-700 mb-2">Prendre RDV</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="accueil" class="hero text-white py-20 md:py-32">
+        <div class="container mx-auto px-4 text-center">
+            <h1 class="text-4xl md:text-5xl font-bold mb-6">Soins Néphrologiques de Qualité</h1>
+            <p class="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">Des solutions personnalisées pour vos problèmes rénaux avec des spécialistes expérimentés.</p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="https://wa.me/22896419253" class="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-md font-medium text-lg">Prendre Rendez-vous</a>
+                <a href="#services" class="bg-white hover:bg-gray-100 text-blue-600 px-8 py-3 rounded-md font-medium text-lg">Nos Services</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Emergency Banner -->
+    <div class="bg-red-600 text-white py-3">
+        <div class="container mx-auto px-4 flex flex-col md:flex-row items-center justify-between">
+            <div class="flex items-center mb-2 md:mb-0">
+                <i class="fas fa-phone-alt mr-2 text-xl"></i>
+                <span class="font-bold">Urgences Néphrologiques:</span>
+            </div>
+            <div class="text-xl font-bold">(+228) 96 41 92 53</div>
+        </div>
+    </div>
+
+    <!-- About Section -->
+    <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-8 md:mb-0 md:pr-8">
+                    <h2 class="text-3xl font-bold text-blue-800 mb-6">À propos de la Clinique de Néphrologie César</h2>
+                    <p class="text-lg mb-4">La Clinique de Néphrologie César est un centre d'excellence spécialisé dans le diagnostic, le traitement et la prise en charge des maladies rénales à Attiégou, derrière Togo 2000.</p>
+                    <p class="text-lg mb-6">Fondée en 2010, notre clinique s'engage à fournir des soins complets et personnalisés à chaque patient, en utilisant les dernières technologies et protocoles de traitement.</p>
+                    <div class="flex flex-wrap gap-4">
+                        <div class="flex items-center bg-white p-3 rounded-lg shadow-sm">
+                            <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                            <span>Équipements modernes</span>
+                        </div>
+                        <div class="flex items-center bg-white p-3 rounded-lg shadow-sm">
+                            <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                            <span>Spécialistes expérimentés</span>
+                        </div>
+                        <div class="flex items-center bg-white p-3 rounded-lg shadow-sm">
+                            <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                            <span>Prise en charge complète</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="md:w-1/2">
+                    <img src="https://images.unsplash.com/photo-1631815588090-d4bfec5b1ccb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Clinique de Néphrologie" class="rounded-lg shadow-lg w-full">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-16">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-blue-800 mb-4">Nos Services Spécialisés</h2>
+                <p class="text-xl text-gray-600 max-w-2xl mx-auto">Nous offrons une gamme complète de services médicaux spécialisés pour répondre à tous vos besoins de santé.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Service 1 -->
+                <div class="service-card bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg">
+                    <div class="h-48 bg-blue-100 flex items-center justify-center">
+                        <i class="fas fa-heartbeat text-blue-600 text-6xl"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-blue-800 mb-3">Consultation Néphrologique</h3>
+                        <p class="text-gray-600 mb-4">Évaluation complète de la fonction rénale et diagnostic des maladies rénales par nos spécialistes.</p>
+                        <a href="https://wa.me/22896419253" class="text-blue-600 font-medium hover:underline">Prendre RDV <i class="fas fa-arrow-right ml-1"></i></a>
+                    </div>
+                </div>
+                
+                <!-- Service 2 -->
+                <div class="service-card bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg">
+                    <div class="h-48 bg-green-100 flex items-center justify-center">
+                        <i class="fas fa-procedures text-green-600 text-6xl"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-blue-800 mb-3">Dialyse</h3>
+                        <p class="text-gray-600 mb-4">Séances d'hémodialyse et dialyse péritonéale dans un environnement stérile et confortable.</p>
+                        <a href="https://wa.me/22896419253" class="text-blue-600 font-medium hover:underline">En savoir plus <i class="fas fa-arrow-right ml-1"></i></a>
+                    </div>
+                </div>
+                
+                <!-- Service 3 -->
+                <div class="service-card bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg">
+                    <div class="h-48 bg-purple-100 flex items-center justify-center">
+                        <i class="fas fa-flask text-purple-600 text-6xl"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-blue-800 mb-3">Analyses Spécialisées</h3>
+                        <p class="text-gray-600 mb-4">Tests de fonction rénale, analyses d'urine et autres examens biologiques spécialisés.</p>
+                        <a href="https://wa.me/22896419253" class="text-blue-600 font-medium hover:underline">Programmer un test <i class="fas fa-arrow-right ml-1"></i></a>
+                    </div>
+                </div>
+                
+                <!-- Service 4 -->
+                <div class="service-card bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg">
+                    <div class="h-48 bg-yellow-100 flex items-center justify-center">
+                        <i class="fas fa-user-md text-yellow-600 text-6xl"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-blue-800 mb-3">Suivi des Maladies Chroniques</h3>
+                        <p class="text-gray-600 mb-4">Prise en charge du diabète, hypertension et autres maladies affectant les reins.</p>
+                        <a href="https://wa.me/22896419253" class="text-blue-600 font-medium hover:underline">Demander un suivi <i class="fas fa-arrow-right ml-1"></i></a>
+                    </div>
+                </div>
+                
+                <!-- Service 5 - Médecine Générale -->
+                <div class="service-card bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg">
+                    <div class="h-48 bg-red-100 flex items-center justify-center">
+                        <i class="fas fa-stethoscope text-red-600 text-6xl"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-blue-800 mb-3">Médecine Générale</h3>
+                        <p class="text-gray-600 mb-4">Consultations médicales générales pour tous les âges et prise en charge globale de votre santé.</p>
+                        <a href="https://wa.me/22896419253" class="text-blue-600 font-medium hover:underline">Consulter un médecin <i class="fas fa-arrow-right ml-1"></i></a>
+                    </div>
+                </div>
+                
+                <!-- Service 6 - Rhumatologie -->
+                <div class="service-card bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg">
+                    <div class="h-48 bg-indigo-100 flex items-center justify-center">
+                        <i class="fas fa-bone text-indigo-600 text-6xl"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-blue-800 mb-3">Rhumatologie</h3>
+                        <p class="text-gray-600 mb-4">Diagnostic et traitement des maladies des articulations, des os et des muscles.</p>
+                        <a href="https://wa.me/22896419253" class="text-blue-600 font-medium hover:underline">Prendre RDV <i class="fas fa-arrow-right ml-1"></i></a>
+                    </div>
+                </div>
+
+                <!-- Service 7 - Dermatologie-Vénéréologie -->
+                <div class="service-card bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg">
+                    <div class="h-48 bg-pink-100 flex items-center justify-center">
+                        <i class="fas fa-allergies text-pink-600 text-6xl"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-blue-800 mb-3">Dermatologie-Vénéréologie</h3>
+                        <p class="text-gray-600 mb-4">Diagnostic et traitement des maladies de la peau et des infections sexuellement transmissibles.</p>
+                        <a href="https://wa.me/22896419253" class="text-blue-600 font-medium hover:underline">Prendre RDV <i class="fas fa-arrow-right ml-1"></i></a>
+                    </div>
+                </div>
+
+                <!-- Service 8 - Diabétologie-Nutrition -->
+                <div class="service-card bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg">
+                    <div class="h-48 bg-teal-100 flex items-center justify-center">
+                        <i class="fas fa-apple-alt text-teal-600 text-6xl"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-blue-800 mb-3">Diabétologie-Nutrition</h3>
+                        <p class="text-gray-600 mb-4">Prise en charge du diabète et conseils nutritionnels personnalisés. Consultation tous les jeudis.</p>
+                        <a href="https://wa.me/22896419253" class="text-blue-600 font-medium hover:underline">Prendre RDV <i class="fas fa-arrow-right ml-1"></i></a>
+                    </div>
+                </div>
+
+                <!-- Service 9 - Gynécologie/Consultation Prénatale -->
+                <div class="service-card bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg">
+                    <div class="h-48 bg-orange-100 flex items-center justify-center">
+                        <i class="fas fa-baby text-orange-600 text-6xl"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-blue-800 mb-3">Gynécologie/Consultation Prénatale</h3>
+                        <p class="text-gray-600 mb-4">Suivi de grossesse et consultations gynécologiques. Consultation tous les mercredis.</p>
+                        <a href="https://wa.me/22896419253" class="text-blue-600 font-medium hover:underline">Prendre RDV <i class="fas fa-arrow-right ml-1"></i></a>
+                    </div>
+                </div>
+
+                <!-- Service 10 - Cardiologie Fœtale -->
+                <div class="service-card bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg">
+                    <div class="h-48 bg-rose-100 flex items-center justify-center">
+                        <i class="fas fa-heartbeat text-rose-600 text-6xl"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-blue-800 mb-3">Cardiologie Fœtale</h3>
+                        <p class="text-gray-600 mb-4">Évaluation cardiaque du fœtus et diagnostic précoce des malformations cardiaques.</p>
+                        <a href="https://wa.me/22896419253" class="text-blue-600 font-medium hover:underline">Prendre RDV <i class="fas fa-arrow-right ml-1"></i></a>
+                    </div>
+                </div>
+
+                <!-- Service 11 - Pédiatrie -->
+                <div class="service-card bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg">
+                    <div class="h-48 bg-cyan-100 flex items-center justify-center">
+                        <i class="fas fa-child text-cyan-600 text-6xl"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-blue-800 mb-3">Pédiatrie</h3>
+                        <p class="text-gray-600 mb-4">Soins médicaux spécialisés pour les enfants et les adolescents.</p>
+                        <a href="https://wa.me/22896419253" class="text-blue-600 font-medium hover:underline">Prendre RDV <i class="fas fa-arrow-right ml-1"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section id="equipe" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-blue-800 mb-4">Notre Équipe Médicale</h2>
+                <p class="text-xl text-gray-600 max-w-2xl mx-auto">Des professionnels dévoués à votre santé rénale et globale.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Néphrologue -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-md">
+                    <div class="h-64 bg-blue-100 flex items-center justify-center">
+                        <i class="fas fa-user-md text-blue-600 text-8xl"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-blue-800 mb-1">Dr. DOLAAMA Badomta</h3>
+                        <p class="text-blue-600 font-medium mb-3">Néphrologue Chef de Service</p>
+                        <p class="text-gray-600 mb-4">Spécialiste en néphrologie avec plus de 15 ans d'expérience dans le traitement des maladies rénales complexes.</p>
+                        <div class="flex space-x-3">
+                            <a href="#" class="text-blue-600 hover:text-blue-800"><i class="fab fa-linkedin"></i></a>
+                            <a href="#" class="text-blue-600 hover:text-blue-800"><i class="fas fa-envelope"></i></a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Professeur -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-md">
+                    <div class="h-64 bg-green-100 flex items-center justify-center">
+                        <i class="fas fa-graduation-cap text-green-600 text-8xl"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-blue-800 mb-1">Pr. SABI</h3>
+                        <p class="text-blue-600 font-medium mb-3">Professeur de Néphrologie</p>
+                        <p class="text-gray-600 mb-4">Enseignante à la faculté de médecine et chercheuse reconnue dans le domaine des maladies rénales chroniques.</p>
+                        <div class="flex space-x-3">
+                            <a href="#" class="text-blue-600 hover:text-blue-800"><i class="fab fa-linkedin"></i></a>
+                            <a href="#" class="text-blue-600 hover:text-blue-800"><i class="fas fa-envelope"></i></a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Ophtalmologue -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-md">
+                    <div class="h-64 bg-purple-100 flex items-center justify-center">
+                        <i class="fas fa-eye text-purple-600 text-8xl"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-blue-800 mb-1">Dr. TABE-DJATO</h3>
+                        <p class="text-blue-600 font-medium mb-3">Ophtalmologue</p>
+                        <p class="text-gray-600 mb-4">Spécialiste des maladies oculaires avec une expertise particulière dans les complications oculaires du diabète.</p>
+                        <div class="flex space-x-3">
+                            <a href="#" class="text-blue-600 hover:text-blue-800"><i class="fab fa-linkedin"></i></a>
+                            <a href="#" class="text-blue-600 hover:text-blue-800"><i class="fas fa-envelope"></i></a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Hématologue -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-md">
+                    <div class="h-64 bg-pink-100 flex items-center justify-center">
+                        <i class="fas fa-tint text-pink-600 text-8xl"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-blue-800 mb-1">Dr.  WOMEY Corcellar</h3>
+                        <p class="text-blue-600 font-medium mb-3">Hématologue</p>
+                        <p class="text-gray-600 mb-4">Experte dans le diagnostic et le traitement des maladies du sang et des troubles de la coagulation.</p>
+                        <div class="flex space-x-3">
+                            <a href="#" class="text-blue-600 hover:text-blue-800"><i class="fab fa-linkedin"></i></a>
+                            <a href="#" class="text-blue-600 hover:text-blue-800"><i class="fas fa-envelope"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12">
+                <a href="https://wa.me/22896419253" class="inline-block bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-md font-medium text-lg">Rencontrer notre équipe</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Assurances Section -->
+    <section id="assurances" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-blue-800 mb-4">Nos Partenaires Assurances</h2>
+                <p class="text-xl text-gray-600 max-w-2xl mx-auto">Nous travaillons avec les principales assurances santé pour faciliter votre prise en charge.</p>
+            </div>
+            
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 items-center justify-center">
+                <!-- INAM -->
+                <div class="bg-white p-6 rounded-lg shadow-sm flex flex-col items-center">
+                    <div class="h-32 w-32 bg-blue-50 rounded-full flex items-center justify-center mb-4 assurance-logo">
+                        <!-- <i class="fas fa-shield-alt text-blue-600 text-5xl"></i> -->
+                         <img src="INAM.jpg" alt="INAM" class="w-full h-full object-cover">
+                    </div>
+                    <h3 class="text-xl font-bold text-blue-800 mb-2">INAM</h3>
+                    <p class="text-gray-600 text-center">Institut National d'Assurance Maladie</p>
+                </div>
+                
+                <!-- AMU -->
+                <div class="bg-white p-6 rounded-lg shadow-sm flex flex-col items-center">
+                    <div class="h-32 w-32 bg-green-50 rounded-full flex items-center justify-center mb-4 assurance-logo">
+                        <!-- <i class="fas fa-heartbeat text-green-600 text-5xl"></i> -->
+                         <img src="cnsstg_logo.jpeg" alt="cnsstg_logo class="w-full h-full object-cover">
+                    </div>
+                    <h3 class="text-xl font-bold text-blue-800 mb-2">AMU</h3>
+                    <p class="text-gray-600 text-center">Assurance Maladie Universelle</p>
+                </div>
+                
+                <!-- GTA ASSURANCE -->
+                <div class="bg-white p-6 rounded-lg shadow-sm flex flex-col items-center">
+                    <div class="h-32 w-32 bg-purple-50 rounded-full flex items-center justify-center mb-4 assurance-logo">
+                        <!-- <i class="fas fa-building text-purple-600 text-5xl"></i> -->
+                         <img src="gta.jpeg" alt="Togo-GTA-Assurances" class="w-full h-full object-cover">
+                    </div>
+                    <h3 class="text-xl font-bold text-blue-800 mb-2">GTA ASSURANCE</h3>
+                    <p class="text-gray-600 text-center">Garantie Tout Accident</p>
+                </div>
+                
+                <!-- SUNU ASSURANCE -->
+                <div class="bg-white p-6 rounded-lg shadow-sm flex flex-col items-center">
+                    <div class="h-32 w-32 bg-yellow-50 rounded-full flex items-center justify-center mb-4 assurance-logo">
+                        <!-- <i class="fas fa-sun text-yellow-600 text-5xl"></i> -->
+                         <img src="sunu-assurance.png" alt="sunu-assurance" class="w-full h-full object-cover">
+                    </div>
+                    <h3 class="text-xl font-bold text-blue-800 mb-2">SUNU ASSURANCE</h3>
+                    <p class="text-gray-600 text-center">Protection Santé Complète</p>
+                </div>
+
+                <!-- TRANSVIE -->
+                <div class="bg-white p-6 rounded-lg shadow-sm flex flex-col items-center">
+                    <div class="h-32 w-32 bg-red-50 rounded-full flex items-center justify-center mb-4 assurance-logo">
+                        <!-- <i class="fas fa-exchange-alt text-red-600 text-5xl"></i> -->
+                         <img src="transvie logo.webp" alt="TRANSVIE" class="w-full h-full object-cover">
+                    </div>
+                    <h3 class="text-xl font-bold text-blue-800 mb-2">TRANSVIE</h3>
+                    <p class="text-gray-600 text-center">Assurance Vie et Santé</p>
+                </div>
+
+                <!-- DOUMEVIE -->
+                <div class="bg-white p-6 rounded-lg shadow-sm flex flex-col items-center">
+                    <div class="h-32 w-32 bg-indigo-50 rounded-full flex items-center justify-center mb-4 assurance-logo">
+                        <i class="fas fa-hand-holding-heart text-indigo-600 text-5xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-blue-800 mb-2">DOUMEVIE</h3>
+                    <p class="text-gray-600 text-center">Protection Familiale</p>
+                </div>
+
+                <!-- MSH -->
+                <div class="bg-white p-6 rounded-lg shadow-sm flex flex-col items-center">
+                    <div class="h-32 w-32 bg-teal-50 rounded-full flex items-center justify-center mb-4 assurance-logo">
+                        <!-- <i class="fas fa-globe-africa text-teal-600 text-5xl"></i> -->
+                         <img src="mshinternational_logo.jpeg" alt="mshinternational_logo" class="w-full h-full object-cover">
+                    </div>
+                    <h3 class="text-xl font-bold text-blue-800 mb-2">MSH</h3>
+                    <p class="text-gray-600 text-center">Médecins Sans Frontières Santé</p>
+                </div>
+
+                <!-- GCA -->
+                <div class="bg-white p-6 rounded-lg shadow-sm flex flex-col items-center">
+                    <div class="h-32 w-32 bg-indigo-50 rounded-full flex items-center justify-center mb-4 assurance-logo">
+                        <!-- <i class="fas fa-hand-holding-heart text-indigo-600 text-5xl"></i> -->
+                         <img src="gcatogo_logo.jpeg" alt="gcatogo_logo" class="w-full h-full object-cover">
+                    </div>
+                    <h3 class="text-xl font-bold text-blue-800 mb-2">GCA</h3>
+                    <p class="text-gray-600 text-center">Conseils, Etudes et Placements d'Assurance et Réassurance</p>
+                </div>
+
+                <!-- Espace vide pour alignement -->
+                <div class="bg-transparent p-6 rounded-lg shadow-sm flex flex-col items-center opacity-0">
+                    <div class="h-32 w-32"></div>
+                </div>
+            </div>
+            
+            <div class="mt-12 bg-blue-50 rounded-lg p-6">
+                <h3 class="text-xl font-bold text-blue-800 mb-4 text-center">Comment fonctionne la prise en charge ?</h3>
+                <div class="grid md:grid-cols-3 gap-6">
+                    <div class="flex items-start">
+                        <div class="bg-blue-100 p-2 rounded-full mr-4">
+                            <i class="fas fa-file-alt text-blue-600"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-blue-800 mb-2">1. Vérifiez votre couverture</h4>
+                            <p class="text-gray-600">Contactez votre assureur pour connaître les modalités de prise en charge de nos services.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start">
+                        <div class="bg-blue-100 p-2 rounded-full mr-4">
+                            <i class="fas fa-phone text-blue-600"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-blue-800 mb-2">2. Contactez-nous</h4>
+                            <p class="text-gray-600">Notre équipe administrative peut vous aider à vérifier votre éligibilité avant votre visite.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start">
+                        <div class="bg-blue-100 p-2 rounded-full mr-4">
+                            <i class="fas fa-id-card text-blue-600"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-blue-800 mb-2">3. Présentez votre carte</h4>
+                            <p class="text-gray-600">N'oubliez pas votre carte d'assuré et une pièce d'identité lors de votre rendez-vous.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="py-16 bg-blue-800 text-white">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+                <div>
+                    <div class="text-4xl font-bold mb-2">1,200+</div>
+                    <div class="text-xl">Patients traités</div>
+                </div>
+                <div>
+                    <div class="text-4xl font-bold mb-2">15+</div>
+                    <div class="text-xl">Ans d'expérience</div>
+                </div>
+                <div>
+                    <div class="text-4xl font-bold mb-2">98%</div>
+                    <div class="text-xl">Satisfaction patients</div>
+                </div>
+                <div>
+                    <div class="text-4xl font-bold mb-2">24/7</div>
+                    <div class="text-xl">Urgences couvertes</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Appointment Section -->
+    <section id="rdv" class="py-16">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col lg:flex-row gap-8">
+                <div class="lg:w-1/2">
+                    <div class="appointment-form bg-white rounded-lg p-8">
+                        <h2 class="text-2xl font-bold text-blue-800 mb-6">Prenez Rendez-vous</h2>
+                        <form id="appointmentForm">
+                            <div class="mb-4">
+                                <label for="name" class="block text-gray-700 mb-2">Nom complet</label>
+                                <input type="text" id="name" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" required>
+                            </div>
+                            <div class="mb-4">
+                                <label for="phone" class="block text-gray-700 mb-2">Téléphone</label>
+                                <input type="tel" id="phone" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" required>
+                            </div>
+                            <div class="mb-4">
+                                <label for="email" class="block text-gray-700 mb-2">Email (optionnel)</label>
+                                <input type="email" id="email" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
+                            </div>
+                            <div class="mb-4">
+                                <label for="service" class="block text-gray-700 mb-2">Service demandé</label>
+                                <select id="service" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" required>
+                                    <option value="">Sélectionnez un service</option>
+                                    <option value="consultation">Consultation Néphrologique</option>
+                                    <option value="dialyse">Dialyse</option>
+                                    <option value="analyse">Analyses Spécialisées</option>
+                                    <option value="suivi">Suivi des Maladies Chroniques</option>
+                                    <option value="medecine">Médecine Générale</option>
+                                    <option value="rhumatologie">Rhumatologie</option>
+                                    <option value="dermatologie">Dermatologie-Vénéréologie</option>
+                                    <option value="diabetologie">Diabétologie-Nutrition (Jeudi)</option>
+                                    <option value="gynecologie">Gynécologie/Consultation Prénatale (Mercredi)</option>
+                                    <option value="cardio-foetale">Cardiologie Fœtale</option>
+                                    <option value="pediatrie">Pédiatrie</option>
+                                </select>
+                            </div>
+                            <div class="mb-4">
+                                <label for="date" class="block text-gray-700 mb-2">Date souhaitée</label>
+                                <input type="date" id="date" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" required>
+                            </div>
+                            <div class="mb-6">
+                                <label for="message" class="block text-gray-700 mb-2">Message (optionnel)</label>
+                                <textarea id="message" rows="3" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea>
+                            </div>
+                            <button type="submit" class="w-full bg-blue-600 hover:bg-blue-700 text-white py-3 rounded-md font-medium">Confirmer le RDV</button>
+                        </form>
+                    </div>
+                </div>
+                
+                <div class="lg:w-1/2">
+                    <div class="bg-white rounded-lg p-8 h-full">
+                        <h2 class="text-2xl font-bold text-blue-800 mb-6">Nos Horaires</h2>
+                        <div class="space-y-4 mb-8">
+                            <div class="flex justify-between border-b pb-2">
+                                <span class="font-medium">Lundi - Vendredi</span>
+                                <span>8h00 - 18h00</span>
+                            </div>
+                            <div class="flex justify-between border-b pb-2">
+                                <span class="font-medium">Samedi</span>
+                                <span>8h00 - 14h00</span>
+                            </div>
+                            <div class="flex justify-between border-b pb-2">
+                                <span class="font-medium">Dimanche</span>
+                                <span>Urgences seulement</span>
+                            </div>
+                        </div>
+                        
+                        <div class="bg-blue-50 p-6 rounded-lg mb-8">
+                            <h3 class="text-lg font-bold text-blue-800 mb-3">Informations importantes</h3>
+                            <ul class="space-y-2">
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-blue-600 mt-1 mr-2"></i>
+                                    <span>Présentez-vous 15 minutes avant votre rendez-vous</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-blue-600 mt-1 mr-2"></i>
+                                    <span>Apportez vos anciens résultats d'analyses</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-blue-600 mt-1 mr-2"></i>
+                                    <span>Les annulations doivent être faites 24h à l'avance</span>
+                                </li>
+                            </ul>
+                        </div>
+                        
+                        <div class="bg-yellow-50 p-6 rounded-lg">
+                            <h3 class="text-lg font-bold text-yellow-800 mb-3">Urgences</h3>
+                            <p class="mb-3">Pour les urgences néphrologiques en dehors des heures d'ouverture :</p>
+                            <div class="flex items-center">
+                                <i class="fas fa-phone-alt text-yellow-600 mr-3 text-xl"></i>
+                                <span class="text-xl font-bold">(+228) 22 21 20 19 / 96 41 92 53 / 90 78 44 68</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-blue-800 mb-4">Témoignages de Patients</h2>
+                <p class="text-xl text-gray-600 max-w-2xl mx-auto">Ce que nos patients disent de notre clinique.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Testimonial 1 -->
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <div class="flex items-center mb-4">
+                        <div class="h-12 w-12 bg-blue-100 rounded-full flex items-center justify-center text-blue-600 mr-4">
+                            <i class="fas fa-user text-xl"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold">Komlan A.</h4>
+                            <div class="flex text-yellow-400">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-600">"Le Dr. Adjo a sauvé ma vie quand j'ai découvert mon insuffisance rénale. Grâce à son expertise et au suivi rigoureux, ma qualité de vie s'est grandement améliorée."</p>
+                </div>
+                
+                <!-- Testimonial 2 -->
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <div class="flex items-center mb-4">
+                        <div class="h-12 w-12 bg-green-100 rounded-full flex items-center justify-center text-green-600 mr-4">
+                            <i class="fas fa-user text-xl"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold">Afi D.</h4>
+                            <div class="flex text-yellow-400">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-600">"L'équipe de dialyse est exceptionnelle. Ils sont attentionnés, professionnels et rendent ces séances difficiles beaucoup plus supportables. La clinique est très propre et bien équipée."</p>
+                </div>
+                
+                <!-- Testimonial 3 -->
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <div class="flex items-center mb-4">
+                        <div class="h-12 w-12 bg-purple-100 rounded-full flex items-center justify-center text-purple-600 mr-4">
+                            <i class="fas fa-user text-xl"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold">Kossi T.</h4>
+                            <div class="flex text-yellow-400">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-600">"Mon fils de 8 ans a été pris en charge par le Dr. Kouassi avec une gentillesse et une compétence remarquables. Les explications étaient claires et adaptées à son âge."</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact & Map Section -->
+    <section id="contact" class="py-16">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col lg:flex-row gap-8">
+                <div class="lg:w-1/2">
+                    <h2 class="text-3xl font-bold text-blue-800 mb-6">Nous Contacter</h2>
+                    
+                    <div class="mb-8">
+                        <h3 class="text-xl font-bold text-blue-800 mb-4">Coordonnées</h3>
+                        <div class="space-y-4">
+                            <div class="flex items-start">
+                                <i class="fas fa-map-marker-alt text-blue-600 mt-1 mr-4 text-xl"></i>
+                                <div>
+                                    <p class="font-medium">Adresse</p>
+                                    <p class="text-gray-600">Non loin de l'EPP d'Attiégou (Derrière Togo 2000), Lomé, Togo</p>
+                                </div>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fas fa-phone-alt text-blue-600 mr-4 text-xl"></i>
+                                <div>
+                                    <p class="font-medium">Téléphone</p>
+                                    <p class="text-gray-600">(+228) 22 21 20 19 / 96 41 92 53</p>
+                                </div>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fas fa-envelope text-blue-600 mr-4 text-xl"></i>
+                                <div>
+                                    <p class="font-medium">Email</p>
+                                    <p class="text-gray-600">cesar.togo@outlook.fr</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <h3 class="text-xl font-bold text-blue-800 mb-4">Envoyez-nous un message</h3>
+                        <form id="contactForm">
+                            <div class="mb-4">
+                                <label for="contactName" class="block text-gray-700 mb-2">Votre nom</label>
+                                <input type="text" id="contactName" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" required>
+                            </div>
+                            <div class="mb-4">
+                                <label for="contactEmail" class="block text-gray-700 mb-2">Votre email</label>
+                                <input type="email" id="contactEmail" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" required>
+                            </div>
+                            <div class="mb-4">
+                                <label for="contactSubject" class="block text-gray-700 mb-2">Sujet</label>
+                                <input type="text" id="contactSubject" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" required>
+                            </div>
+                            <div class="mb-4">
+                                <label for="contactMessage" class="block text-gray-700 mb-2">Message</label>
+                                <textarea id="contactMessage" rows="4" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" required></textarea>
+                            </div>
+                            <button type="submit" class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-md font-medium">Envoyer le message</button>
+                        </form>
+                    </div>
+                </div>
+                
+                <div class="lg:w-1/2">
+                    <div class="map-container rounded-lg shadow-lg">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3966.53747468932!2d1.2580916!3d6.1925832!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1023e3a79471dd31%3A0xf68754b21a208b99!2zTG9tw6k!5e0!3m2!1sen!2stg!4v1745327816350!5m2!1sen!2stg" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                    </div>
+                    
+                    <div class="mt-8 bg-white p-6 rounded-lg shadow-md">
+                        <h3 class="text-xl font-bold text-blue-800 mb-4">Parking et Accès</h3>
+                        <p class="mb-4 text-gray-600">La clinique dispose d'un parking privé et sécurisé pour les patients. L'entrée principale est accessible aux personnes à mobilité réduite.</p>
+                        <div class="flex items-center">
+                            <!-- <i class="fas fa-bus text-blue-600 mr-3 text-xl"></i> -->
+                            <!-- <span>Accessible par les lignes de bus 12, 15 et 23 (Arrêt "Togo 2000")</span> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-blue-800 mb-4">Questions Fréquentes</h2>
+                <p class="text-xl text-gray-600 max-w-2xl mx-auto">Trouvez des réponses à vos questions sur nos services.</p>
+            </div>
+            
+            <div class="max-w-3xl mx-auto">
+                <!-- FAQ Item 1 -->
+                <div class="mb-4 border border-gray-200 rounded-lg overflow-hidden">
+                    <button class="faq-question w-full text-left p-4 bg-white hover:bg-gray-50 focus:outline-none">
+                        <div class="flex justify-between items-center">
+                            <span class="font-medium text-blue-800">Quels sont les signes d'un problème rénal ?</span>
+                            <i class="fas fa-chevron-down text-blue-600 transition-transform"></i>
+                        </div>
+                    </button>
+                    <div class="faq-answer hidden p-4 bg-gray-50 border-t border-gray-200">
+                        <p class="text-gray-600">Les signes courants incluent fatigue inhabituelle, gonflement des pieds et des chevilles, changements dans la miction (fréquence, couleur), hypertension artérielle, nausées et perte d'appétit. Si vous présentez ces symptômes, consultez un néphrologue.</p>
+                    </div>
+                </div>
+                
+                <!-- FAQ Item 2 -->
+                <div class="mb-4 border border-gray-200 rounded-lg overflow-hidden">
+                    <button class="faq-question w-full text-left p-4 bg-white hover:bg-gray-50 focus:outline-none">
+                        <div class="flex justify-between items-center">
+                            <span class="font-medium text-blue-800">Comment se préparer pour une consultation de néphrologie ?</span>
+                            <i class="fas fa-chevron-down text-blue-600 transition-transform"></i>
+                        </div>
+                    </button>
+                    <div class="faq-answer hidden p-4 bg-gray-50 border-t border-gray-200">
+                        <p class="text-gray-600">Apportez vos anciens bilans sanguins, analyses d'urine, échographies ou autres examens rénaux. Notez vos médicaments actuels et vos antécédents médicaux. Il est recommandé d'être à jeun pour certains tests qui pourraient être prescrits lors de la consultation.</p>
+                    </div>
+                </div>
+                
+                <!-- FAQ Item 3 -->
+                <div class="mb-4 border border-gray-200 rounded-lg overflow-hidden">
+                    <button class="faq-question w-full text-left p-4 bg-white hover:bg-gray-50 focus:outline-none">
+                        <div class="flex justify-between items-center">
+                            <span class="font-medium text-blue-800">La dialyse est-elle douloureuse ?</span>
+                            <i class="fas fa-chevron-down text-blue-600 transition-transform"></i>
+                        </div>
+                    </button>
+                    <div class="faq-answer hidden p-4 bg-gray-50 border-t border-gray-200">
+                        <p class="text-gray-600">La dialyse elle-même n'est pas douloureuse. L'insertion de l'aiguille pour l'accès vasculaire peut causer un léger inconfort, mais nos infirmiers spécialisés utilisent des techniques pour minimiser cette gêne. La plupart des patients lisent, regardent la télévision ou dorment pendant les séances.</p>
+                    </div>
+                </div>
+                
+                <!-- FAQ Item 4 -->
+                <div class="mb-4 border border-gray-200 rounded-lg overflow-hidden">
+                    <button class="faq-question w-full text-left p-4 bg-white hover:bg-gray-50 focus:outline-none">
+                        <div class="flex justify-between items-center">
+                            <span class="font-medium text-blue-800">Prenez-vous en charge les assurances maladie ?</span>
+                            <i class="fas fa-chevron-down text-blue-600 transition-transform"></i>
+                        </div>
+                    </button>
+                    <div class="faq-answer hidden p-4 bg-gray-50 border-t border-gray-200">
+                        <p class="text-gray-600">Oui, nous travaillons avec la plupart des assurances maladie privées et publiques au Togo. Nos services de dialyse sont également couverts par le régime d'assurance maladie universelle. Notre service administratif peut vous aider à vérifier votre couverture avant votre première visite.</p>
+                    </div>
+                </div>
+                
+                <!-- FAQ Item 5 -->
+                <div class="mb-4 border border-gray-200 rounded-lg overflow-hidden">
+                    <button class="faq-question w-full text-left p-4 bg-white hover:bg-gray-50 focus:outline-none">
+                        <div class="flex justify-between items-center">
+                            <span class="font-medium text-blue-800">Quelle est la différence entre un urologue et un néphrologue ?</span>
+                            <i class="fas fa-chevron-down text-blue-600 transition-transform"></i>
+                        </div>
+                    </button>
+                    <div class="faq-answer hidden p-4 bg-gray-50 border-t border-gray-200">
+                        <p class="text-gray-600">Le néphrologue se concentre sur le diagnostic et le traitement médical des maladies rénales (insuffisance rénale, glomérulonéphrites, etc.). L'urologue est un chirurgien spécialisé dans les voies urinaires (reins, vessie, prostate) et les organes génitaux masculins. Dans notre clinique, nous collaborons avec des urologues pour une prise en charge complète.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="py-16 bg-blue-800 text-white">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl font-bold mb-6">Abonnez-vous à notre newsletter</h2>
+            <p class="text-xl mb-8 max-w-2xl mx-auto">Recevez des conseils pour la santé rénale, des nouvelles de la clinique et des offres spéciales.</p>
+            
+            <form class="max-w-md mx-auto flex">
+                <input type="email" placeholder="Votre email" class="flex-grow px-4 py-3 rounded-l-md focus:outline-none text-gray-800">
+                <button type="submit" class="bg-blue-600 hover:bg-blue-700 px-6 py-3 rounded-r-md font-medium">S'abonner</button>
+            </form>
+            
+            <p class="mt-4 text-sm opacity-80">Nous ne partagerons jamais votre email. Désabonnez-vous à tout moment.</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white pt-16 pb-8">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+                <!-- Column 1 -->
+                <div>
+                    <div class="flex items-center mb-4">
+                        <div class="bg-white-600 text-white p-2 rounded-full mr-3">
+                            <!-- <i class="fas fa-heartbeat text-xl"></i> -->
+                             <img src="Entete_CESAR.png" alt="Entete_CESAR" width=75px" height="75px">
+                        </div>
+                        <h3 class="text-xl font-bold">Clinique César</h3>
+                    </div>
+                    <p class="mb-4 text-gray-400">Centre d'excellence en néphrologie à Attiégou, Togo. Soins complets et personnalisés pour vos reins.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                
+                <!-- Column 2 -->
+                <div>
+                    <h3 class="text-lg font-bold mb-4">Liens rapides</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#accueil" class="text-gray-400 hover:text-white">Accueil</a></li>
+                        <li><a href="#services" class="text-gray-400 hover:text-white">Nos Services</a></li>
+                        <li><a href="#equipe" class="text-gray-400 hover:text-white">Notre Équipe</a></li>
+                        <li><a href="#assurances" class="text-gray-400 hover:text-white">Assurances</a></li>
+                        <li><a href="#contact" class="text-gray-400 hover:text-white">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Column 3 -->
+                <div>
+                    <h3 class="text-lg font-bold mb-4">Services</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white">Consultation Néphrologique</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Dialyse</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Analyses Spécialisées</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Médecine Générale</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Rhumatologie</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Dermatologie-Vénéréologie</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Diabétologie-Nutrition</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Gynécologie/Consultation Prénatale</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Cardiologie Fœtale</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Pédiatrie</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Column 4 -->
+                <div>
+                    <h3 class="text-lg font-bold mb-4">Contact</h3>
+                    <address class="not-italic text-gray-400">
+                        <p class="mb-2">Rue de la Clinique, Attiégou</p>
+                        <p class="mb-2">(Derrière Togo 2000) non loin de l'EPP Attiégou, Lomé, Togo</p>
+                        <p class="mb-2"><i class="fas fa-phone-alt mr-2"></i> (+228) 22 26 44 21 / 96 41 92 53</p>
+                        <p class="mb-2"><i class="fas fa-envelope mr-2"></i> cesar.togo@outlook.fr</p>
+                        <p><i class="fas fa-clock mr-2"></i> Lun-Ven: 8h-18h, Sam: 8h-14h</p>
+                    </address>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-400 mb-4 md:mb-0">© 2025 Clinique de Néphrologie César. Tous droits réservés.</p>
+                <div class="flex space-x-6">
+                    <a href="#" class="text-gray-400 hover:text-white text-sm">Politique de confidentialité</a>
+                    <a href="#" class="text-gray-400 hover:text-white text-sm">Conditions d'utilisation</a>
+                    <a href="#" class="text-gray-400 hover:text-white text-sm">Mentions légales</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="backToTop" class="fixed bottom-8 right-8 bg-blue-600 text-white p-3 rounded-full shadow-lg opacity-0 invisible transition-all duration-300">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script>
+        // Mobile Menu Toggle
+        const mobileMenuButton = document.getElementById('mobileMenuButton');
+        const mobileMenu = document.getElementById('mobileMenu');
+        
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('open');
+            // Change icon from bars to times when menu is open
+            const icon = mobileMenuButton.querySelector('i');
+            if (mobileMenu.classList.contains('open')) {
+                icon.classList.remove('fa-bars');
+                icon.classList.add('fa-times');
+            } else {
+                icon.classList.remove('fa-times');
+                icon.classList.add('fa-bars');
+            }
+        });
+
+        // Close mobile menu when clicking on a link
+        document.querySelectorAll('#mobileMenu a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.remove('open');
+                const icon = mobileMenuButton.querySelector('i');
+                icon.classList.remove('fa-times');
+                icon.classList.add('fa-bars');
+            });
+        });
+
+        // FAQ Toggle
+        document.querySelectorAll('.faq-question').forEach(button => {
+            button.addEventListener('click', () => {
+                const answer = button.nextElementSibling;
+                const icon = button.querySelector('i');
+                
+                answer.classList.toggle('hidden');
+                icon.classList.toggle('rotate-180');
+            });
+        });
+        
+        // Back to Top Button
+        const backToTopButton = document.getElementById('backToTop');
+        
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                backToTopButton.classList.remove('opacity-0', 'invisible');
+                backToTopButton.classList.add('opacity-100', 'visible');
+            } else {
+                backToTopButton.classList.remove('opacity-100', 'visible');
+                backToTopButton.classList.add('opacity-0', 'invisible');
+            }
+        });
+        
+        backToTopButton.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+        
+        // Form Submission
+        document.getElementById('appointmentForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Merci ! Votre demande de rendez-vous a été envoyée. Nous vous contacterons pour confirmation.');
+            this.reset();
+        });
+        
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Merci pour votre message ! Nous vous répondrons dans les plus brefs délais.');
+            this.reset();
+        });
+    </script>
+</body>
+</html>
